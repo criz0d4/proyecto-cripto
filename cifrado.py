@@ -13,7 +13,7 @@ def main():
 	f = open("mensaje.txt","r")
 	if f.mode == "r":
 		mclaro = f.read()
-		print(mclaro)
+		print("Mensaje en claro:", mclaro)
 	f.close()
 	#Llamada a funcion de transposicion: 
 	t_groups(mclaro)
@@ -25,7 +25,7 @@ def t_groups(mclaro):
 	print(t_mclaro)
 	#Longitud de la cadena
 	n = len(t_mclaro)
-	print 'Len:',n
+	print ('Len:',n)
 	#Separando en substrings (grupos)
 	p = 0
 	group = { }
