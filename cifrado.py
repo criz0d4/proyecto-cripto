@@ -1,7 +1,7 @@
 ################################
 #	Autores:
 #	Cristian Valeriano Barrios
-#	Gerardo Salinas Gutiérrez
+#	Gerardo Salinas Gutierrez
 ################################
 #	Primera Capa: T. por grupos
 #	Segunda Capa: Afin
@@ -11,10 +11,9 @@
 def main():
 
 	f = open("mensaje.txt","r")
-	#print ('Mensaje en claro: ')
 	if f.mode == "r":
 		mclaro = f.read()
-		print('Mensaje en claro: ', mclaro)
+		print("Mensaje en claro:", mclaro)
 	f.close()
 	#Llamada a funcion de transposicion: 
 	t_groups(mclaro)
