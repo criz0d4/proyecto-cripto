@@ -26,6 +26,8 @@ def afin(mclaro, a, b, n):
     print("\nProceso de cifrado:\nEl mensaje en claro es:", mclaro,
           ", constante de decimación =", a,
           ", constante de desplazamiento =", b)
+    
+    print(list(sorted(n)))
 
 
 
