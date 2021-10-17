@@ -36,3 +36,4 @@ El proceso de cifrado y descifrado debe de pasar por los 3 algoritmos asignados.
   - Archivo ejecutable (.exe)
   - Código del programa comentado en un archivo (*.txt)
 
+[Instrucciones completas](requisitos.pdf)
