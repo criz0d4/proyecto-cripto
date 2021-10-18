@@ -8,16 +8,13 @@ Autores:
     Gerardo Salinas Gutierrez
 '''
 
-# Segunda capa: Columnas
-
-# Los caracteres de Mcla se acomodan en un determinado número de columnas.
-# Escribiendo el Mcla en forma horizontal de izquierda a derecha (no depende del no. de caracteres de la palabra clave).
-# Nota: Todas las columnas deben contener el mismo número de caracters, en caso contrario se completan éstas con X para cumplir la condición.
-# El ordenamiento de las columnas dependerá del ordenamiento alfabético de los caraccteres de dicha palabra.
-
 print("\n----------------------------------------",
       "\nSegunda capa - T. por columnas con clave",
       "\n----------------------------------------")
+
+'''
+Lectura del mensaje y la clave
+'''
 
 #archivo abierto en modo lectura
 f = open("mensaje.txt","r")
@@ -26,17 +23,28 @@ if f.mode == "r":
 print("\nMensaje leído:", mensaje.upper())
 f.close() #cierre del archivo
 
-mensaje = mensaje.replace(' ', '').upper()	 
-clave = str(input("\nIntroduce la clave sin repetir letras: "))
-clave = clave.replace(' ', '').upper()	 
+mensaje = mensaje.replace(' ', '').upper() #se elimina cualquier espacio y se convierte en mayúsculas
 
-# Cifrado
+#ingresamos la clave, esta debe tener caracteres NO repetidos
+clave = str(input("\nIntroduce la clave sin repetir letras: ")) 
+clave = clave.replace(' ', '').upper() #se elimina cualquier espacio y se convierte en mayúsculas
+
+'''
+Proceso de cifrado
+'''
+# Los caracteres de Mcla se acomodan en un determinado número de columnas.
+# Escribiendo el Mcla en forma horizontal de izquierda a derecha (no. de columnas depende del no. de caracteres de la palabra clave).
+# Nota: Todas las columnas deben contener el mismo número de caracteres, en caso contrario se completan éstas con X para cumplir la condición.
+# El ordenamiento de las columnas dependerá del ordenamiento alfabético de los caracteres de dicha palabra.
+
 print("\n------------------",
       "\nProceso de cifrado",
       "\n------------------\n")
 
-msgLength = len(mensaje)
+msgLength = len(mensaje) #tamaño del mensaje a cifrar
 msgList = list(mensaje)
+
+print(msgList)
 
 columnas = len(clave)
 filas = int(math.ceil(msgLength/columnas))
