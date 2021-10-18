@@ -26,7 +26,6 @@ Equipo 3:
 El proceso de cifrado y descifrado debe de pasar por los 3 algoritmos asignados.
 
 ## Contenido
----
   Teórico: Trabajo escrito
   - Introducción
   - Justificación
