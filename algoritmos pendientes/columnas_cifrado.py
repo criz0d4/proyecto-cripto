@@ -27,13 +27,13 @@ print("\nMensaje leído:", mensaje.upper())
 f.close() #cierre del archivo
 
 mensaje = mensaje.replace(' ', '').upper()	 
-clave = str(input("\nIntroduce la clave: "))
+clave = str(input("\nIntroduce la clave sin repetir letras: "))
 clave = clave.replace(' ', '').upper()	 
 
 # Cifrado
 print("\n------------------",
       "\nProceso de cifrado",
-      "\n------------------")
+      "\n------------------\n")
 
 msgLength = len(mensaje)
 msgList = list(mensaje)

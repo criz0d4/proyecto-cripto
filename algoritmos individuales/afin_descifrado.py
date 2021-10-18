@@ -21,7 +21,7 @@ if f.mode == "r":
 print("Mensaje leído:", mcifrado)
 f.close() #cierre del archivo
 
-a = int(input("Ingrese la constante de decimación (a): ")) #ingresar a 
+a = int(input("\nIngrese la constante de decimación (a): ")) #ingresar a 
 b = int(input("Ingrese la constante de desplazamiento (b): ")) #ingresar b
 
 # Descifrado
@@ -44,4 +44,4 @@ print("\n---------------------",
       "\nProceso de descifrado",
       "\n---------------------")
 
-print("\nMensaje descifrado por Afín:", descifrado)
+print("\nMensaje descifrado por Afín:\n->", descifrado)
