@@ -18,12 +18,12 @@ n = len(alfabeto)
 f = open("mensaje.txt","r")
 if f.mode == "r":
     mclaro = f.read() #se guarda el mensaje leído 
-print("Mensaje leído:", mclaro)
+print("\nMensaje leído:", mclaro.upper())
 f.close() #cierre del archivo
 
 mclaro = mclaro.replace(' ', '').upper() #se eliminan los espacios
 
-a = int(input("Ingrese la constante de decimación (a): ")) #ingresar a 
+a = int(input("\nIngrese la constante de decimación (a): ")) #ingresar a 
 b = int(input("Ingrese la constante de desplazamiento (b): ")) #ingresar b
 
 # Cifrado
