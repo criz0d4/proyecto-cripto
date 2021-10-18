@@ -47,7 +47,7 @@ msgList = list(mensaje) #el mensaje se divide en elementos de una ['L', 'I', 'S'
 columnas = len(clave) #se determina el número de columnas según el tamaño de la clave
 filas = int(math.ceil(msgLength/columnas)) #se calculan las filas, math.ceil devuelve el entero mayor o más próximo de la división del msgLength/columnas
 
-####en caso de haber espacios vacíos...
+#en caso de haber espacios vacíos
 vacios = int((filas*columnas) - msgLength) #se determina el número de espacios vacios. Será el resultado de filas*columnas menos el tamaño del mensaje
 msgList.extend('X' * vacios) #.extend incrementa el núemero de elementos en la lista con 'X' según el número de espacios vacíos
 
