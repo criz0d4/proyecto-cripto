@@ -42,39 +42,37 @@ print("\n------------------",
       "\n------------------\n")
 
 msgLength = len(mensaje) #tamaño del mensaje a cifrar
-msgList = list(mensaje)
+msgList = list(mensaje) #el mensaje se divide en elementos de una ['L', 'I', 'S', 'T', 'A']
 
-print(msgList)
+columnas = len(clave) #se determina el número de columnas según el tamaño de la clave
+filas = int(math.ceil(msgLength/columnas)) #se calculan las filas, math.ceil devuelve el entero mayor o más próximo de la división del msgLength/columnas
 
-columnas = len(clave)
-filas = int(math.ceil(msgLength/columnas))
+####en caso de haber espacios vacíos...
+vacios = int((filas*columnas) - msgLength) #se determina el número de espacios vacios. Será el resultado de filas*columnas menos el tamaño del mensaje
+msgList.extend('X' * vacios) #.extend incrementa el núemero de elementos en la lista con 'X' según el número de espacios vacíos
 
-vacio = int((filas*columnas) - msgLength)
-msgList.extend('X' * vacio)
+cifrado = ['']*columnas #se crea la matriz para el mensaje cifrado
 
-cifrado = ['']*columnas
-
-for columna in range(columnas):
+for columna in range(columnas): #escritura del mensaje cifrado
     i = columna
-    while i < len(msgList):
-        cifrado[columna] += msgList[i]
-        i += columnas
-print(cifrado)
+    while i < len(msgList): #mientras i sea menor al tamaño de la lista del mensaje
+        cifrado[columna] += msgList[i] #se agrega caracter por caracter de la lista en la columna correspondiente
+        i += columnas #sumando número de las columnas, avanzamos ese número de posiciones en la lista. Así, nos colocamos en la fila de abajo y continúa el ciclo.
+    
+claveApuntador = 0 #variable del apuntador de la clave
+claveOrdenada = sorted(list(clave)) #la clave se divide en elementos de una lista y se ordena alfabéticamente
 
-keyPointer = 0
-keylist = sorted(list(clave))
-textoCifrado = ""
+textoCifrado = "" #variable donde se guardará el mensaje cifrado
 
-for i in range(columnas):
-    curr = clave.index(keylist[keyPointer])
-    textoCifrado += ''.join(cifrado[curr])
-    keyPointer += 1
-
-print(textoCifrado)        
-
+for i in range(columnas):   
+    #'posicionClave' contiene la posición en la lista de cada letra de la clave ordenada en la clave original
+    posicionClave = clave.index(claveOrdenada[claveApuntador]) #clave.index hace la búsqueda en la clave original    
+    textoCifrado += ''.join(cifrado[posicionClave]) #se escribe en la cadena textoCifrado el contenido de la columna determinada por posicionClave dentro de la matriz de cifrado
+    claveApuntador += 1 #el apuntador se incrementa para continuar con la siguiente columna
+  
 #archivo abierto en modo escritura
 f = open("mensajecifrado.txt","w")
 if f.mode == "w":
     f.write(textoCifrado) #se guarda el mensaje cifrado 
-    print("\nMensaje cifrado guardado exitosamente en 'mensajecifrado.txt'")
+    print("Mensaje cifrado guardado exitosamente en 'mensajecifrado.txt'")
 f.close() #cierre del archivo
