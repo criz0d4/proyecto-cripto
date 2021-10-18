@@ -10,6 +10,10 @@ print("\n-------------------",
       "\nTercera capa - Afín",
       "\n-------------------")
 
+'''
+Lectura del mensaje, constantes de decimación y de desplazamiento
+'''
+
 alfabeto= 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ' #alfabeto de 27 caracteres
 n = len(alfabeto)
 descifrado = ''
@@ -21,10 +25,12 @@ if f.mode == "r":
 print("Mensaje leído:", mcifrado)
 f.close() #cierre del archivo
 
-a = int(input("Ingrese la constante de decimación (a): ")) #ingresar a 
+a = int(input("\nIngrese la constante de decimación (a): ")) #ingresar a 
 b = int(input("Ingrese la constante de desplazamiento (b): ")) #ingresar b
 
-# Descifrado
+'''
+Proceso de descifrado
+'''
 # Mi = (Ci*a^-1)mod(n) 
 # a1 es el a^(-1)
 
@@ -44,4 +50,4 @@ print("\n---------------------",
       "\nProceso de descifrado",
       "\n---------------------")
 
-print("\nMensaje descifrado por Afín:", descifrado)
+print("\nMensaje descifrado por Afín:\n->", descifrado)

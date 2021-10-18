@@ -10,6 +10,10 @@ print("\n-------------------",
       "\nTercera capa - Afín",
       "\n-------------------")
 
+'''
+Lectura del mensaje, constantes de decimación y de desplazamiento
+'''
+
 alfabeto= 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ' #alfabeto de 27 caracteres
 cifrado = '' 
 n = len(alfabeto)
@@ -18,16 +22,19 @@ n = len(alfabeto)
 f = open("mensaje.txt","r")
 if f.mode == "r":
     mclaro = f.read() #se guarda el mensaje leído 
-print("Mensaje leído:", mclaro)
+print("\nMensaje leído:", mclaro.upper())
 f.close() #cierre del archivo
 
-mclaro = mclaro.replace(' ', '').upper() #se eliminan los espacios
+mclaro = mclaro.replace(' ', '').upper() #se elimina cualquier espacio y se convierte en mayúsculas
 
-a = int(input("Ingrese la constante de decimación (a): ")) #ingresar a 
+a = int(input("\nIngrese la constante de decimación (a): ")) #ingresar a 
 b = int(input("Ingrese la constante de desplazamiento (b): ")) #ingresar b
 
-# Cifrado
+'''
+Proceso de cifrado
+'''
 # C(i)=(a*Mi+b)mod(n)
+
 print("\n------------------",
       "\nProceso de cifrado",
       "\n------------------")
