@@ -33,7 +33,7 @@ def menu():
 ###	
 
 	if o == 1:
-		print("\nVerificando que exista el archivo: 'mensaje.txt'...\n")
+		print("\nVerificando que exista el archivo: 'Equipo3.txt'...\n")
 		if verifica_mCla() == True :
       
 			from columnas_cifrado import textoCifrado

@@ -19,7 +19,7 @@ Lectura del mensaje y la clave
 #archivo abierto en modo lectura
 
 
-f = open("mensaje.txt","r")
+f = open("Equipo3.txt","r")
 if f.mode == "r":
     mensaje = f.read() #se guarda el mensaje leído 
 print("\nMensaje leído:", mensaje.upper())

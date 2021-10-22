@@ -9,7 +9,7 @@
 import os
 
 def verifica_mCla():
-	if os.path.isfile('mensaje.txt'):
+	if os.path.isfile('Equipo3.txt'):
 		print("Correcto. \nCifrando mensaje...\n")
 		return True
 	else:
