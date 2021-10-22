@@ -18,7 +18,7 @@ def verifica_mCla():
 
 
 def verifica_vernam_clave():
-	if ( os.path.isfile('vernam.txt') and os.path.isfile('clave.txt') ):
+	if ( os.path.isfile('mensajecifrado.txt') and os.path.isfile('clave.txt') ):
 		print("Correcto....\n")
 		return True
 	else:

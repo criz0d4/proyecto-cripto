@@ -7,19 +7,20 @@ Autores:
 '''
 
 print("\n-------------------",
-      "\nTercera capa - Afín",
+      "\nSegunda capa - Afín",
       "\n-------------------")
 
 '''
 Lectura del mensaje, constantes de decimación y de desplazamiento
 '''
 
-alfabeto= 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ' #alfabeto de 27 caracteres
+alfabeto= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' #alfabeto de 26 caracteres
 cifrado = '' 
 n = len(alfabeto)
 
+
 #archivo abierto en modo lectura
-f = open("mensaje.txt","r")
+f = open("mensajecifrado.txt","r")
 if f.mode == "r":
     mclaro = f.read() #se guarda el mensaje leído 
 print("\nMensaje leído:", mclaro.upper())
@@ -50,8 +51,7 @@ for i in mclaro:
     cifrado+=alfabeto[x%n] #se aplica el mod(n) dentro de alfabeto[] para encontrar el caracter según la posición    
 
 #archivo abierto en modo escritura
-f = open("mensajecifrado.txt","w")
+f = open("mensajecifrado.txt","w", encoding='utf-8')
 if f.mode == "w":
     f.write(cifrado) #se guarda el mensaje cifrado 
-    print("\nMensaje cifrado guardado exitosamente en 'mensajecifrado.txt'")
 f.close() #cierre del archivo

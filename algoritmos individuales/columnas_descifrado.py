@@ -9,7 +9,7 @@ Autores:
 '''
 
 print("\n----------------------------------------",
-      "\nSegunda capa - T. por columnas con clave",
+      "\nPrimera capa - T. por columnas con clave",
       "\n----------------------------------------")
 
 '''
@@ -61,7 +61,4 @@ for i in range(columnas): #se busca la columna
 mensaje = "" #variable donde se guardará el mensaje cifrado
 
 for i in range(filas):
-    mensaje += ''.join(descifrado[i]) #se escribe en la cadena mensaje el contenido de las filas de la matriz de descifrado
-
-print("\nMensaje descifrado por Transposición",
-      "\npor columnas con clave:\n->", mensaje)       
+    mensaje += ''.join(descifrado[i]) #se escribe en la cadena mensaje el contenido de las filas de la matriz de descifrado    

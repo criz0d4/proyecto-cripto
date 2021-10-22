@@ -9,7 +9,7 @@ Autores:
 '''
 
 print("\n----------------------------------------",
-      "\nSegunda capa - T. por columnas con clave",
+      "\nPrimera capa - T. por columnas con clave",
       "\n----------------------------------------")
 
 '''
@@ -17,11 +17,14 @@ Lectura del mensaje y la clave
 '''
 
 #archivo abierto en modo lectura
+
+
 f = open("mensaje.txt","r")
 if f.mode == "r":
     mensaje = f.read() #se guarda el mensaje leído 
 print("\nMensaje leído:", mensaje.upper())
 f.close() #cierre del archivo
+
 
 mensaje = mensaje.replace(' ', '').upper() #se elimina cualquier espacio y se convierte en mayúsculas
 
@@ -74,5 +77,4 @@ for i in range(columnas):
 f = open("mensajecifrado.txt","w")
 if f.mode == "w":
     f.write(textoCifrado) #se guarda el mensaje cifrado 
-    print("Mensaje cifrado guardado exitosamente en 'mensajecifrado.txt'")
 f.close() #cierre del archivo

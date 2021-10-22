@@ -7,16 +7,17 @@ Autores:
 '''
 
 print("\n-------------------",
-      "\nTercera capa - Afín",
+      "\nSegunda capa - Afín",
       "\n-------------------")
 
 '''
 Lectura del mensaje, constantes de decimación y de desplazamiento
 '''
 
-alfabeto= 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ' #alfabeto de 27 caracteres
+alfabeto= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' #alfabeto de 26 caracteres
 n = len(alfabeto)
 descifrado = ''
+
 
 #archivo abierto en modo lectura
 f = open("mensajecifrado.txt","r")
@@ -50,4 +51,8 @@ print("\n---------------------",
       "\nProceso de descifrado",
       "\n---------------------")
 
-print("\nMensaje descifrado por Afín:\n->", descifrado)
+#archivo abierto en modo escritura
+f = open("mensajecifrado.txt","w")
+if f.mode == "w":
+    f.write(descifrado) #se guarda el mensaje cifrado 
+f.close() #cierre del archivo

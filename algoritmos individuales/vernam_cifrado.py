@@ -16,7 +16,11 @@ from operator import xor
 
 #mCla = 'everything' #Cadena de prueba
 
-f = open("mensaje.txt","r")
+print("\n---------------------",
+      "\nTercera capa - Vernam",
+      "\n---------------------")
+
+f = open("mensajecifrado.txt","r")
 if f.mode == "r":
     mCla = f.read() #se guarda el mensaje leído 
 print("\nMensaje leído:", mCla)
@@ -64,10 +68,10 @@ def cifrado(mCla):
 	print ()
 
 	#Guardando el mensaje cifrado en un txt
-	f = open("vernam.txt","w")
+	f = open("mensajecifrado.txt","w")
 	if f.mode == "w":
 		f.write(cifrado) #se guarda el mensaje cifrado 
-		print("\nMensaje cifrado guardado exitosamente en 'vernam.txt'")
+		print("\nMensaje cifrado guardado exitosamente en 'mensajecifrado.txt'")
 	f.close() #cierre del archivo
 
 cifrado(mCla)

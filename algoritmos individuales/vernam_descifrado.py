@@ -1,6 +1,5 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
-
 '''
 Cifrado - Afín
 Autores:
@@ -15,9 +14,13 @@ import sys
 from operator import xor
 
 def descifrado():
+    
+	print("\n---------------------",
+			"\nTercera capa - Vernam",
+   			"\n---------------------")
 
 	#Abriendo el txt donde está el mensaje cifrado
-	f = open("vernam.txt","r")
+	f = open("mensajecifrado.txt","r")
 	if f.mode == "r":
 		mensajeStr = f.read() #se guarda el mensaje leído en un string
 		print("\nMensaje leído:", mensajeStr)
@@ -38,9 +41,10 @@ def descifrado():
 
 	#cifrado_binario = ''.join(bin(ord(x))[2:].zfill(8) for x in cifrado)	# Se pasa el cifrado obtenido a binario y se guarda como string
 
-	#print ('Mensaje descifrado en binario: ' + cifrado_binario)
-	print ('Mensaje descifrado: ' + cifrado)
-	print ()
-
-
+	#archivo abierto en modo escritura
+	f = open("mensajecifrado.txt","w")
+	if f.mode == "w":
+		f.write(cifrado) #se guarda el mensaje cifrado 
+	f.close() #cierre del archivo
+  
 descifrado()
